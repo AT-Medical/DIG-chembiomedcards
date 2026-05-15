@@ -1,2 +1,11 @@
 name: Content Review
-about: Fachliche Prüfung oder Korrektur von Karteninhalten
+description: Fachliche Prüfung oder Korrektur von Karteninhalten
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibung
+      description: Bitte beschreibe die gewünschte fachliche Prüfung oder Korrektur der Karteninhalte.
+      placeholder: Beschreibe den Inhalt, die betroffene Karte und die gewünschte Änderung.
+    validations:
+      required: true
