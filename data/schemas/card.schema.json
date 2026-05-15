@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ChemBioMedCard",
+  "type": "object",
+  "required": ["card_id", "slug", "title", "area_prefix", "assets", "qr"],
+  "properties": {
+    "card_id": { "type": "string", "pattern": "^[a-z]{2,4}_[0-9]{3}$" },
+    "slug": { "type": "string" },
+    "title": { "type": "string" },
+    "area_prefix": { "type": "string", "enum": ["AC", "OC", "BC", "MB", "APC", "PH"] },
+    "chapter": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "level": { "type": "string" },
+    "learning_goals": { "type": "array", "items": { "type": "string" } },
+    "assets": {
+      "type": "object",
+      "required": ["front", "back"],
+      "properties": {
+        "front": { "type": "string" },
+        "back": { "type": "string" }
+      }
+    },
+    "qr": {
+      "type": "object",
+      "required": ["short_url", "redirect_target"],
+      "properties": {
+        "short_url": { "type": "string", "format": "uri" },
+        "redirect_target": { "type": "string", "format": "uri" }
+      }
+    },
+    "lms": {
+      "type": "object",
+      "properties": {
+        "target_url": { "type": "string", "format": "uri" }
+      }
+    },
+    "status_fields": { "type": "array", "items": { "type": "string" } },
+    "licensing": {
+      "type": "object",
+      "properties": {
+        "package_id": { "type": "string" },
+        "preview_free": { "type": "boolean" }
+      }
+    },
+    "notes_enabled": { "type": "boolean" },
+    "user_media_enabled": { "type": "boolean" }
+  }
+}
