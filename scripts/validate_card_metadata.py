@@ -2,7 +2,7 @@
 """Validate cards.master.csv rows against the cards.master.schema.json rules.
 
 Usage:
-    python3 scripts/validate_card_metadata.py [--csv PATH] [--schema PATH]
+    python3 scripts/validate_card_metadata.py [--csv PATH]
 
 The CSV is parsed row by row (RFC 4180). Each row is validated for:
 - Required fields present and non-empty
@@ -10,6 +10,8 @@ The CSV is parsed row by row (RFC 4180). Each row is validated for:
 - module is one of AC, OC, BC, MB, APC, PH
 - card_id lowercase prefix matches module (e.g. module=OC → card_id starts with oc_)
 """
+
+from __future__ import annotations
 
 import argparse
 import csv
