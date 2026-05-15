@@ -1,0 +1,21 @@
+card_id: oc_012
+title: Primärer Alkohol
+chapter: organische_chemie/alkohole
+module: OC
+card_type: structure
+level: grundlagen
+front_asset: cards/OC/front/oc_012_primaerer_alkohol_front.png
+back_asset: cards/OC/back/oc_012_primaerer_alkohol_back.png
+qr_url: https://chembiomed-cards.de/c/oc012
+lms_url: https://lms.at-medical.example/oc/primaerer-alkohol
+tags:
+  - organische_chemie
+  - alkohole
+  - funktionelle_gruppen
+related_cards:
+  - oc_011
+  - oc_013
+learning_goal: Primäre Alkohole identifizieren und von sekundären bzw. tertiären Alkoholen unterscheiden.
+print_status: draft
+web_status: draft
+review_status: in_review

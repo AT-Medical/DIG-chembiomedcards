@@ -1,0 +1,19 @@
+{
+  "project": "ChemBioMed Cards",
+  "version": "0.1.0",
+  "tokens": {
+    "spacing": { "xs": 4, "sm": 8, "md": 16, "lg": 24 },
+    "radius": { "card": 8 },
+    "typography": { "base_size": 16 },
+    "colors": {
+      "surface": "#FFFFFF",
+      "text_primary": "#1A1A1A",
+      "accent_ac": "#1E88E5",
+      "accent_oc": "#FB8C00",
+      "accent_bc": "#43A047",
+      "accent_mb": "#8E24AA",
+      "accent_apc": "#00897B",
+      "accent_ph": "#E53935"
+    }
+  }
+}

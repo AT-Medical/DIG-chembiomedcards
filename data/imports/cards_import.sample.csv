@@ -1,2 +1,0 @@
-card_id,slug,title,area_prefix,chapter,level,front_asset,back_asset,qr_short_url,redirect_target,lms_target_url,package_id,preview_free
-oc_012,oc_012_primaerer_alkohol,Primärer Alkohol,OC,organische_chemie/alkohole,grundlagen,print/assets/front/oc_012_primaerer_alkohol_front.png,print/assets/back/oc_012_primaerer_alkohol_back.png,https://chembiomed-cards.de/c/oc012,https://chembiomed-cards.de/cards/oc_012_primaerer_alkohol,https://lms.at-medical.example/chemie/organische-chemie/alkohole,oc_basics_01,true
