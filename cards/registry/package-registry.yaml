@@ -1,5 +1,48 @@
+# ChemBioMed Cards – Paket-Registry
+# Jedes Paket entspricht einer käuflichen Einheit auf der Plattform.
+# status: draft | active | deprecated
+
 packages:
+
+  - package_id: ac_basics_01
+    module: AC
+    description: "Allgemeine Chemie – Grundlagenpaket 1 (Atomaufbau, Bindungsarten, Stöchiometrie)"
+    included_cards: []  # TODO: Karten-IDs eintragen nach Produktion
+    price_eur: null  # TBD – ausstehende Preisfestlegung
+    status: draft
+
   - package_id: oc_basics_01
     module: OC
+    description: "Organische Chemie – Grundlagenpaket 1 (Funktionelle Gruppen, Alkohole, Aldehyde)"
     included_cards:
       - oc_012
+    price_eur: null  # TBD
+    status: draft
+
+  - package_id: bc_basics_01
+    module: BC
+    description: "Biochemie – Grundlagenpaket 1 (Aminosäuren, Proteine, Enzyme)"
+    included_cards: []
+    price_eur: null
+    status: draft
+
+  - package_id: mb_basics_01
+    module: MB
+    description: "Molekularbiologie – Grundlagenpaket 1 (DNA-Replikation, Transkription, Translation)"
+    included_cards: []
+    price_eur: null
+    status: draft
+
+  - package_id: apc_basics_01
+    module: APC
+    description: "Angewandte Chemie – Grundlagenpaket 1 (Ernährung, klinische Chemie, Medizin)"
+    included_cards: []
+    price_eur: null
+    status: draft
+
+  - package_id: full_bundle_v1
+    module: ALL
+    description: "ChemBioMed Cards – Gesamtpaket v1 (AC + OC + BC + MB + APC)"
+    included_cards: []  # Wird dynamisch aus Modulpaketen zusammengestellt
+    price_eur: null
+    status: draft

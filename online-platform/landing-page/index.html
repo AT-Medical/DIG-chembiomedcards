@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemBioMed Cards – Lernkarten-Referenzsystem</title>
+    <style>
+        :root {
+            --ac:  #1E88E5;
+            --oc:  #FB8C00;
+            --bc:  #43A047;
+            --mb:  #8E24AA;
+            --apc: #00897B;
+            --ph:  #E53935;
+            --text-primary: #212121;
+            --text-secondary: #616161;
+            --text-light: #9e9e9e;
+            --bg: #ffffff;
+            --bg-section: #f8f9fa;
+            --border: #e0e0e0;
+            --radius: 10px;
+            --shadow: 0 2px 16px rgba(0,0,0,0.08);
+            --max-width: 1100px;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* ---- Navigation ---- */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+        .nav-brand span { color: var(--oc); }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+
+        /* ---- Hero ---- */
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 60%);
+            padding: 96px 24px 80px;
+            text-align: center;
+        }
+        .hero-inner { max-width: 760px; margin: 0 auto; }
+        .hero-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--oc);
+            background: #fff3e0;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 58px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--oc);
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 16px;
+            line-height: 1.6;
+        }
+        .hero-desc {
+            font-size: 15px;
+            color: var(--text-light);
+            max-width: 520px;
+            margin: 0 auto 40px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--oc);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 40px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 4px 16px rgba(251,140,0,0.3);
+        }
+        .cta-btn:hover { background: #e57c00; transform: translateY(-1px); }
+
+        /* ---- Sections shared ---- */
+        section { padding: 72px 24px; }
+        .section-header {
+            text-align: center;
+            max-width: var(--max-width);
+            margin: 0 auto 48px;
+        }
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+        }
+        .container { max-width: var(--max-width); margin: 0 auto; }
+
+        /* ---- Module Cards ---- */
+        .modules-section { background: var(--bg-section); }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .module-card {
+            background: var(--bg);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--module-color, #ccc);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .module-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
+        .module-card.ac  { --module-color: var(--ac); }
+        .module-card.oc  { --module-color: var(--oc); }
+        .module-card.bc  { --module-color: var(--bc); }
+        .module-card.mb  { --module-color: var(--mb); }
+        .module-card.apc { --module-color: var(--apc); }
+        .module-card.ph  { --module-color: var(--ph); }
+        .module-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: var(--module-color, #ccc);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .module-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .module-desc { font-size: 13.5px; color: var(--text-secondary); line-height: 1.5; }
+        .module-tag {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--module-color, #999);
+            background: color-mix(in srgb, var(--module-color, #ccc) 10%, white);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        .ph-badge {
+            font-size: 10px;
+            color: var(--ph);
+            background: #fff0f0;
+            border: 1px solid #ffd0d0;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* ---- Features ---- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+            display: block;
+        }
+        .feature-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .feature-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+        /* ---- Footer ---- */
+        footer {
+            background: #212121;
+            color: #bdbdbd;
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 13px;
+        }
+        footer strong { color: #fff; }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding: 64px 20px 56px; }
+            section { padding: 52px 20px; }
+            .modules-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+    <div class="nav-inner">
+        <a href="#" class="nav-brand">Chem<span>BioMed</span> Cards</a>
+        <ul class="nav-links">
+            <li><a href="#module">Karten</a></li>
+            <li><a href="#features">Plattform</a></li>
+            <li><a href="#features">Print</a></li>
+            <li><a href="#footer">Über uns</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-label">Lernkarten-System</div>
+        <h1>Chem<em>BioMed</em> Cards</h1>
+        <p class="hero-subtitle">
+            Das Lernkarten-Referenzsystem für Chemie, Biochemie und Medizin
+        </p>
+        <p class="hero-desc">
+            Strukturierte Lernkarten im DIN-A6-Format für sechs Fachmodule &ndash;
+            druckfertig, digital verfügbar und mit QR-Code-Integration.
+        </p>
+        <a href="#module" class="cta-btn">Zur Plattform</a>
+    </div>
+</section>
+
+<section class="modules-section" id="module">
+    <div class="section-header">
+        <div class="section-label">Fachmodule</div>
+        <div class="section-title">Sechs Module &ndash; ein System</div>
+    </div>
+    <div class="modules-grid">
+        <div class="module-card ac">
+            <div class="module-badge">AC</div>
+            <div class="module-name">Allgemeine Chemie</div>
+            <div class="module-desc">Grundlagen der allgemeinen und anorganischen Chemie: Atomaufbau, Bindungsarten, Stöchiometrie und elementare Reaktionstypen.</div>
+            <span class="module-tag">AC</span>
+        </div>
+        <div class="module-card oc">
+            <div class="module-badge">OC</div>
+            <div class="module-name">Organische Chemie</div>
+            <div class="module-desc">Funktionelle Gruppen, Reaktionsmechanismen und Stoffklassen der organischen Chemie: von Alkoholen bis Aminosäuren.</div>
+            <span class="module-tag">OC</span>
+        </div>
+        <div class="module-card bc">
+            <div class="module-badge">BC</div>
+            <div class="module-name">Biochemie</div>
+            <div class="module-desc">Molekulare Grundlagen des Lebens: Stoffwechselwege, Enzyme, Proteinfunktionen und biologi­sche Makromoleküle.</div>
+            <span class="module-tag">BC</span>
+        </div>
+        <div class="module-card mb">
+            <div class="module-badge">MB</div>
+            <div class="module-name">Molekularbiologie</div>
+            <div class="module-desc">DNA, RNA und Proteinbiosynthese: Replikation, Transkription, Translation und Genregulations­mechanismen.</div>
+            <span class="module-tag">MB</span>
+        </div>
+        <div class="module-card apc">
+            <div class="module-badge">APC</div>
+            <div class="module-name">Angewandte Chemie</div>
+            <div class="module-desc">Ernährungswissenschaft, klinische Chemie und medizinische Anwendungen: Brückenfach zwischen Grundlagenwissen und Praxis.</div>
+            <span class="module-tag">APC</span>
+        </div>
+        <div class="module-card ph">
+            <div class="module-badge">PH</div>
+            <div class="module-name">
+                Pharmakologie
+                <span class="ph-badge">Erweiterungsmodul</span>
+            </div>
+            <div class="module-desc">Wirkmechanismen, Pharmakokinetik und klinische Pharmakologie: Arzneimittelgruppen und Interaktionsprofile.</div>
+            <span class="module-tag">PH</span>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="section-header">
+        <div class="section-label">Funktionen</div>
+        <div class="section-title">Lernen &ndash; drucken &ndash; vernetzen</div>
+    </div>
+    <div class="features-grid container">
+        <div class="feature-card">
+            <span class="feature-icon">&#128196;</span>
+            <div class="feature-title">Druckkarten</div>
+            <div class="feature-desc">Alle Karten im druckfertigen DIN-A6-Querformat (148 × 105 mm) mit 3 mm Beschnitt, CMYK-Farbraum und hochwertigen Druckvorlagen.</div>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">&#128187;</span>
+            <div class="feature-title">Online-Plattform</div>
+            <div class="feature-desc">Digitale Lernumgebung mit Kartenflip, Lernstatus-Tracking (Bekannt / Unbekannt / Wiederholen), eigenen Notizen und Spaced-Repetition-Integration.</div>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">&#128247;</span>
+            <div class="feature-title">QR &amp; LMS-Integration</div>
+            <div class="feature-desc">Jede Karte hat einen stabilen QR-Code, der auf die digitale Kartenansicht verlinkt. LMS-kompatibel (Moodle-Referenz), SCORM-Vorbereitung geplant.</div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <p>&copy; Copyright 2026 | <strong>Andreas Tremml</strong> | <strong>AT Medical GmbH</strong> | Alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>

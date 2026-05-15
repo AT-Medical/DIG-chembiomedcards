@@ -19,3 +19,15 @@ learning_goal: Primäre Alkohole identifizieren und von sekundären bzw. tertiä
 print_status: draft
 web_status: draft
 review_status: in_review
+author: "AT Medical GmbH"
+reviewer: ""  # TBD
+version: "0.1.0"
+source_status: "draft"  # draft | approved | published
+created_at: "2026-01-01"
+updated_at: "2026-01-01"
+learning_objectives:
+  - Primäre Alkohole anhand der Struktur identifizieren
+  - Primäre von sekundären und tertiären Alkoholen unterscheiden
+  - Typische Reaktionen primärer Alkohole benennen
+difficulty: "beginner"  # beginner | intermediate | advanced
+estimated_study_time_min: 3
