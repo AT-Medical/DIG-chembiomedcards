@@ -32,6 +32,6 @@
 - Produktionsprozess skalieren
 - Partnerprozesse für Distribution und Veröffentlichung etablieren
 
-## Phase 8: Pharmakologie-Erweiterung
+## Phase 8: Pharmakologie – Erweiterungsmodul
 - PH als eigenes Modul inhaltlich ausbauen
 - Fachspezifische Kartenserien und Pakete veröffentlichen

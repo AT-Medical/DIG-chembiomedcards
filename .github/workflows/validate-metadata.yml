@@ -13,5 +13,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Placeholder
-        run: echo "Metadata validation workflow scaffold"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate card registry metadata
+        run: python3 scripts/validate_card_metadata.py --csv cards/registry/cards.master.csv

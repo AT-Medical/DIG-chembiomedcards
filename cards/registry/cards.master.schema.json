@@ -1,13 +1,22 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "CardsMasterCsvRow",
+  "$comment": "Describes a single row from cards.master.csv. Validate row by row after CSV parsing (DictReader). card_id uses a lowercase module prefix (e.g. 'ac_001' for module 'AC'). The oneOf block enforces that card_id prefix matches module.",
   "type": "object",
   "required": ["card_id", "slug", "title", "module", "front_asset", "back_asset", "qr_url"],
   "properties": {
-    "card_id": { "type": "string", "pattern": "^[a-z]{2,4}_[0-9]{3}$" },
+    "card_id": {
+      "type": "string",
+      "pattern": "^[a-z]{2,4}_[0-9]{3}$",
+      "$comment": "Format: <lowercase_module_prefix>_<3-digit-number>. Examples: ac_001, oc_012, apc_040. The prefix is always the lowercase form of the module code."
+    },
     "slug": { "type": "string" },
     "title": { "type": "string" },
-    "module": { "type": "string", "enum": ["AC", "OC", "BC", "MB", "APC", "PH"] },
+    "module": {
+      "type": "string",
+      "enum": ["AC", "OC", "BC", "MB", "APC", "PH"],
+      "$comment": "Uppercase module code. Maps to lowercase card_id prefix: AC→ac, OC→oc, BC→bc, MB→mb, APC→apc, PH→ph."
+    },
     "chapter": { "type": "string" },
     "card_type": { "type": "string" },
     "level": { "type": "string" },
@@ -18,5 +27,55 @@
     "print_status": { "type": "string" },
     "web_status": { "type": "string" },
     "review_status": { "type": "string" }
-  }
+  },
+  "oneOf": [
+    {
+      "$comment": "AC – Allgemeine und anorganische Chemie",
+      "properties": {
+        "module": { "const": "AC" },
+        "card_id": { "pattern": "^ac_[0-9]{3}$" }
+      },
+      "required": ["module"]
+    },
+    {
+      "$comment": "OC – Organische Chemie",
+      "properties": {
+        "module": { "const": "OC" },
+        "card_id": { "pattern": "^oc_[0-9]{3}$" }
+      },
+      "required": ["module"]
+    },
+    {
+      "$comment": "BC – Biochemie",
+      "properties": {
+        "module": { "const": "BC" },
+        "card_id": { "pattern": "^bc_[0-9]{3}$" }
+      },
+      "required": ["module"]
+    },
+    {
+      "$comment": "MB – Molekularbiologie der Zelle",
+      "properties": {
+        "module": { "const": "MB" },
+        "card_id": { "pattern": "^mb_[0-9]{3}$" }
+      },
+      "required": ["module"]
+    },
+    {
+      "$comment": "APC – Angewandte Chemie, Ernährung und Medizin",
+      "properties": {
+        "module": { "const": "APC" },
+        "card_id": { "pattern": "^apc_[0-9]{3}$" }
+      },
+      "required": ["module"]
+    },
+    {
+      "$comment": "PH – Pharmakologie",
+      "properties": {
+        "module": { "const": "PH" },
+        "card_id": { "pattern": "^ph_[0-9]{3}$" }
+      },
+      "required": ["module"]
+    }
+  ]
 }
