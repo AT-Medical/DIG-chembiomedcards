@@ -1,0 +1,2 @@
+-- Schema Draft (Platzhalter)
+-- Tabellen für cards, users, user_notes, user_media, licenses, package_access

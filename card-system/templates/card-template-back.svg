@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1050" width="1480" height="1050">
+  <title>ChemBioMed Cards – OC-012 Rückseite</title>
+  <defs>
+    <filter id="card-shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="4" dy="4" stdDeviation="8" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect x="0" y="0" width="1480" height="1050" fill="#ffffff" rx="12"
+        filter="url(#card-shadow)"/>
+  <rect x="0" y="0" width="1480" height="1050" fill="none" stroke="#e0e0e0"
+        stroke-width="2" rx="12"/>
+
+  <!-- === Register Tabs === -->
+  <rect x="0" y="28" width="160" height="110" fill="#e8f0fe" rx="14"/>
+  <rect x="0" y="28" width="80" height="110" fill="#e8f0fe"/>
+  <text x="80" y="93" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#1E88E5" letter-spacing="1">AC</text>
+
+  <rect x="0" y="143" width="160" height="110" fill="#FB8C00" rx="14"/>
+  <rect x="0" y="143" width="80" height="110" fill="#FB8C00"/>
+  <text x="80" y="208" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#ffffff" letter-spacing="1">OC</text>
+
+  <rect x="0" y="258" width="160" height="110" fill="#e8f5e9" rx="14"/>
+  <rect x="0" y="258" width="80" height="110" fill="#e8f5e9"/>
+  <text x="80" y="323" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#43A047" letter-spacing="1">BC</text>
+
+  <rect x="0" y="373" width="160" height="110" fill="#f3e5f5" rx="14"/>
+  <rect x="0" y="373" width="80" height="110" fill="#f3e5f5"/>
+  <text x="80" y="438" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#8E24AA" letter-spacing="1">MB</text>
+
+  <rect x="0" y="488" width="160" height="110" fill="#e0f2f1" rx="14"/>
+  <rect x="0" y="488" width="80" height="110" fill="#e0f2f1"/>
+  <text x="80" y="553" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="25" font-weight="700" fill="#00897B" letter-spacing="1">APC</text>
+
+  <rect x="0" y="603" width="160" height="110" fill="#ffebee" rx="14"/>
+  <rect x="0" y="603" width="80" height="110" fill="#ffebee"/>
+  <text x="80" y="668" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#E53935" letter-spacing="1">PH</text>
+
+  <!-- Logo top right -->
+  <text x="1460" y="50" text-anchor="end"
+        font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="22" font-weight="700" fill="#9e9e9e" letter-spacing="1">CHEMBIOMED CARDS</text>
+
+  <!-- Title bar -->
+  <line x1="185" y1="95" x2="1460" y2="95" stroke="#FB8C00" stroke-width="2"/>
+  <text x="185" y="80" text-anchor="start"
+        font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="48" font-weight="800" fill="#212121">Primärer Alkohol – Rückseite</text>
+
+  <!-- Section: Klinische Relevanz -->
+  <rect x="185" y="115" width="630" height="190" rx="8"
+        fill="none" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="205" y="145" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="24" font-weight="700" fill="#FB8C00" letter-spacing="1">KLINISCHE RELEVANZ</text>
+  <text x="205" y="175" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="20" fill="#757575">[ Inhaltsplatzhalter ]</text>
+
+  <!-- Section: Vernetzung -->
+  <rect x="835" y="115" width="630" height="190" rx="8"
+        fill="none" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="855" y="145" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="24" font-weight="700" fill="#FB8C00" letter-spacing="1">VERNETZUNG</text>
+  <text x="855" y="175" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="20" fill="#757575">[ Verknüpfte Karten: OC-011, OC-013 ]</text>
+
+  <!-- Section: Alltagsrelevanz -->
+  <rect x="185" y="320" width="630" height="190" rx="8"
+        fill="none" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="205" y="350" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="24" font-weight="700" fill="#FB8C00" letter-spacing="1">ALLTAGSRELEVANZ</text>
+  <text x="205" y="380" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="20" fill="#757575">[ Inhaltsplatzhalter ]</text>
+
+  <!-- Section: Literatur -->
+  <rect x="835" y="320" width="630" height="190" rx="8"
+        fill="none" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="855" y="350" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="24" font-weight="700" fill="#FB8C00" letter-spacing="1">LITERATUR</text>
+  <text x="855" y="380" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="20" fill="#757575">[ Quellenplatzhalter ]</text>
+
+  <!-- Section: Pathophysiologie (full width) -->
+  <rect x="185" y="525" width="1280" height="185" rx="8"
+        fill="none" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="205" y="555" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="24" font-weight="700" fill="#FB8C00" letter-spacing="1">PATHOPHYSIOLOGIE / ERNÄHRUNG</text>
+  <text x="205" y="585" font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="20" fill="#757575">[ Inhaltsplatzhalter für erweiterte Informationen ]</text>
+
+  <!-- Footer -->
+  <text x="185" y="1025" text-anchor="start"
+        font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="26" font-weight="600" fill="#9e9e9e">OC-012</text>
+  <rect x="1240" y="862" width="180" height="180" rx="8" fill="#e0e0e0"/>
+  <text x="1330" y="957" text-anchor="middle"
+        font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="22" font-weight="700" fill="#9e9e9e">QR</text>
+  <text x="1230" y="1020" text-anchor="end"
+        font-family="Helvetica Neue, Arial, sans-serif"
+        font-size="18" fill="#bdbdbd">&#169; Copyright 2026 | Andreas Tremml | Alle Rechte vorbehalten</text>
+</svg>

@@ -1,0 +1,11 @@
+name: Bug Report
+description: Fehlerbericht für Inhalte, Daten oder Plattformfunktion
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibung
+      description: Bitte beschreibe den Fehler so genau wie möglich.
+      placeholder: Was ist passiert? Was hast du erwartet?
+    validations:
+      required: true

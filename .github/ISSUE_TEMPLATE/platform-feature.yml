@@ -1,0 +1,14 @@
+name: Platform Feature
+description: Featurewunsch für die Onlineplattform
+title: "[Platform Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Beschreibung
+      description: Beschreibe den gewünschten Funktionsumfang für die Onlineplattform.
+      placeholder: Welche Funktion wird benötigt und warum?
+    validations:
+      required: true

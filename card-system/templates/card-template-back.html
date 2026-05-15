@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemBioMed Cards – OC-012 Rückseite</title>
+    <style>
+        @page { size: 154mm 111mm; margin: 0; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ac:  #1E88E5;
+            --oc:  #FB8C00;
+            --bc:  #43A047;
+            --mb:  #8E24AA;
+            --apc: #00897B;
+            --ph:  #E53935;
+        }
+        html, body {
+            width: 154mm;
+            height: 111mm;
+            overflow: hidden;
+            background: #fff;
+            font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+        .card {
+            position: relative;
+            width: 154mm;
+            height: 111mm;
+            background: #fff;
+        }
+        .tabs {
+            position: absolute;
+            left: 0;
+            top: 3mm;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3mm;
+            z-index: 10;
+        }
+        .tab {
+            width: 16mm;
+            height: 11.6mm;
+            border-radius: 0 3mm 3mm 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6.5pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background: #eeeeee;
+            color: #aaaaaa;
+        }
+        .tab-ac  { color: var(--ac);  background: #e8f0fe; }
+        .tab-oc  { background: var(--oc); color: #fff; box-shadow: 1mm 0 4mm rgba(251,140,0,0.35); }
+        .tab-bc  { color: var(--bc);  background: #e8f5e9; }
+        .tab-mb  { color: var(--mb);  background: #f3e5f5; }
+        .tab-apc { color: var(--apc); background: #e0f2f1; }
+        .tab-ph  { color: var(--ph);  background: #ffebee; }
+        .logo {
+            position: absolute;
+            top: 4mm;
+            right: 4mm;
+            font-size: 5.5pt;
+            font-weight: 700;
+            color: #9e9e9e;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .content {
+            position: absolute;
+            left: 19mm;
+            top: 3mm;
+            right: 3mm;
+            bottom: 22mm;
+            display: flex;
+            flex-direction: column;
+            gap: 2mm;
+            overflow: hidden;
+        }
+        .back-title {
+            font-size: 9pt;
+            font-weight: 800;
+            color: var(--oc);
+            border-bottom: 0.3mm solid var(--oc);
+            padding-bottom: 0.8mm;
+            margin-bottom: 0.5mm;
+        }
+        .sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 2mm 3mm;
+            flex: 1;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8mm;
+        }
+        .section-label {
+            font-size: 6pt;
+            font-weight: 700;
+            color: var(--oc);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .section-content {
+            font-size: 6.5pt;
+            color: #424242;
+            line-height: 1.45;
+        }
+        .section-full {
+            grid-column: 1 / -1;
+        }
+        .footer {
+            position: absolute;
+            bottom: 3mm;
+            left: 19mm;
+            right: 3mm;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        .card-id { font-size: 6.5pt; font-weight: 600; color: #9e9e9e; }
+        .footer-right { display: flex; align-items: flex-end; gap: 2.5mm; }
+        .qr-box {
+            width: 18mm; height: 18mm; background: #e0e0e0;
+            border-radius: 1mm; display: flex; align-items: center;
+            justify-content: center; font-size: 5pt; color: #9e9e9e;
+            font-weight: 700; letter-spacing: 0.5px;
+        }
+        .copyright { font-size: 4.5pt; color: #bdbdbd; text-align: right; max-width: 44mm; line-height: 1.5; }
+        @media print {
+            html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <nav class="tabs" aria-label="Modulregister">
+        <div class="tab tab-ac">AC</div>
+        <div class="tab tab-oc">OC</div>
+        <div class="tab tab-bc">BC</div>
+        <div class="tab tab-mb">MB</div>
+        <div class="tab tab-apc">APC</div>
+        <div class="tab tab-ph">PH</div>
+    </nav>
+    <div class="logo">ChemBioMed Cards</div>
+    <main class="content">
+        <div class="back-title">OC-012 &middot; Primärer Alkohol &ndash; Rückseite</div>
+        <div class="sections">
+            <div class="section">
+                <div class="section-label">Klinische Relevanz</div>
+                <div class="section-content">
+                    Primäre Alkohole sind Ausgangsstoffe für Pharmaka und
+                    Desinfektionsmittel. Ethanol wirkt zentralnervend;
+                    Methanol ist hochtoxisch (Optikusschäden).
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-label">Pathophysiologie</div>
+                <div class="section-content">
+                    Oxidation durch Alkoholdehydrogenase (ADH) zu Aldehyd,
+                    dann zu Carbonsäure. Acetaldehyd vermittelt toxische
+                    Effekte bei Ethanolmetabolismus.
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-label">Ernährung</div>
+                <div class="section-content">
+                    Zuckeralkohole (Sorbit, Xylit) als Zuckerersatzstoffe
+                    – primäre Hydroxylgruppen prägen
+                    süßen Geschmack bei niedrigem glykämischem Index.
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-label">Alltagsrelevanz</div>
+                <div class="section-content">
+                    Ethanol in Getränken, Kosmetika und Reinigungs-
+                    mitteln. 1-Propanol in Handdesinfektionsmitteln.
+                    Primäre Alkohole als Lösungsmittel in der Industrie.
+                </div>
+            </div>
+            <div class="section section-full">
+                <div class="section-label">Quellen / Literatur</div>
+                <div class="section-content">
+                    Clayden, J. et al.: Organic Chemistry. Oxford UP. &ndash;
+                    Mutschler, E.: Arzneimittelwirkungen. WVG. &ndash;
+                    Stryer, L.: Biochemie. Spektrum.
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="card-id">OC-012</div>
+        <div class="footer-right">
+            <div class="qr-box">QR</div>
+            <div class="copyright">&copy; Copyright 2026 | Andreas Tremml | Alle Rechte vorbehalten</div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
