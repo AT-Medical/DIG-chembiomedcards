@@ -1,2 +1,10 @@
 name: Card Production
-about: Neue Karte oder Kartenserie für Produktion vorbereiten
+description: Neue Karte oder Kartenserie für Produktion vorbereiten
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibung
+      description: Beschreibe die neue Karte oder Kartenserie für die Produktion.
+    validations:
+      required: true
