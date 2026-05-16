@@ -197,7 +197,7 @@ M	docs/review-implementation-report.md
 
 ```
 
-### 3.2 `python3 scripts/validate-card-metadata.py`
+### 3.2 `python3 scripts/validate-card-metadata.py` (angeforderter Befehl, fehlschlagend)
 
 - Exit-Code: `2`
 
@@ -206,7 +206,7 @@ M	docs/review-implementation-report.md
 python3: can't open file '/home/runner/work/DIG-chembiomedcards/DIG-chembiomedcards/scripts/validate-card-metadata.py': [Errno 2] No such file or directory
 ```
 
-**Bewertung:** Der aufgerufene Dateiname mit Bindestrich existiert nicht.
+**Bewertung:** Der im Auftrag angegebene Dateiname mit Bindestrich existiert nicht im Repository.
 
 ### 3.3 Operativ tatsächlich vorhandener Validator (für Soll-Ist-Abgleich)
 
