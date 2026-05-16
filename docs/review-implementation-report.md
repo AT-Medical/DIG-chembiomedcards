@@ -197,7 +197,7 @@ M	docs/review-implementation-report.md
 
 ```
 
-### 3.2 `python3 scripts/validate-card-metadata.py` (angeforderter Befehl, fehlschlagend)
+### 3.2 `python3 scripts/validate-card-metadata.py` (angeforderter Befehl, fehlgeschlagen)
 
 - Exit-Code: `2`
 
